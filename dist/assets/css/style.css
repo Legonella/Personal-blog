@@ -360,6 +360,12 @@ textarea {
     padding: 0.2em 0;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -369,4 +375,55 @@ body {
     background-color: #181818;
     font-size: 1.4rem;
     color: white;
+}
+
+/* Blocks */
+.page {
+    overflow: hidden;
+}
+
+.header {
+    width: calc(100% - 300px);
+    height: 30px;
+    background-color: #212121;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    background-color: #202020;
+    box-shadow: 5px 0 15px rgba(5, 5, 5, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.sidebar__header {
+    height: 180px;
+    background-color: #121212;
+}
+
+.sidebar__header img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.main {
+    padding-left: 300px;
+    padding-top: 10rem;
+}
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }

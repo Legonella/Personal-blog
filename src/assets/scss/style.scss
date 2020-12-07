@@ -1,5 +1,11 @@
 @import "vars";
-@import "reset";
+@import "vendor/reset.scss";
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
 
 html {
 	font-size: 62.5%;
@@ -11,5 +17,17 @@ body {
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	background-color: #181818;
 	font-size: 1.4rem;
+	line-height: 1.5;
 	color: white;
 }
+
+
+/* Blocks */
+@import "blocks/page.scss";
+@import "blocks/header.scss";
+@import "blocks/sidebar.scss";
+@import "blocks/main.scss";
+@import "blocks/container.scss";
+@import "blocks/profile.scss";
+@import "blocks/social.scss";
+@import "blocks/btn.scss";
