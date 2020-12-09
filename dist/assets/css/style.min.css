@@ -367,7 +367,7 @@ body {
 .nav__item {
   position: relative; }
   .nav__item:hover .nav__link {
-    background-color: #3137C9; }
+    background-color: #3137c9; }
   .nav__item:hover > .subnav {
     display: block; }
 
@@ -398,8 +398,8 @@ body {
 .subnav {
   display: none;
   width: 165px;
-  padding: .5rem .5rem;
-  background-color: #3137C9;
+  padding: 0.5rem 0.5rem;
+  background-color: #3137c9;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   position: absolute;
@@ -408,11 +408,11 @@ body {
 
 .subnav__link {
   display: block;
-  padding: .45rem 1.2rem;
+  padding: 0.45rem 1.2rem;
   font-size: 1.2rem;
   color: #fff;
   text-decoration: none;
-  transition: background-color .2s ease-in-out; }
+  transition: background-color 0.2s ease-in-out; }
   .subnav__link:hover {
     background-color: #2c31b4; }
 
@@ -490,7 +490,7 @@ body {
   font-size: 1.4rem;
   text-align: center;
   font-weight: 300;
-  color: #DEDEDE; }
+  color: #dedede; }
 
 .profile__text {
   padding: 3rem 0;
@@ -505,7 +505,7 @@ body {
   justify-content: center; }
 
 .social__item {
-  margin: 0 .75rem; }
+  margin: 0 0.75rem; }
 
 .btn {
   display: inline-block;
@@ -521,14 +521,53 @@ body {
   font-weight: 500;
   color: #fff;
   text-decoration: none;
-  transition: background-color .2s linear; }
+  transition: background-color 0.2s linear; }
   .btn--red {
-    background-color: #ED3024;
+    background-color: #ed3024;
     box-shadow: 0 7px 17px -10px rgba(237, 48, 36, 0.3); }
     .btn--red:hover {
       background-color: #e51f13; }
   .btn--blue {
-    background-color: #3137C9;
+    background-color: #3137c9;
     box-shadow: 0 7px 17px -10px rgba(49, 55, 201, 0.3); }
     .btn--blue:hover {
       background-color: #2c31b4; }
+
+.stories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 13px;
+  grid-template-rows: 195px; }
+
+.stories__item {
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+  .stories__item::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; }
+
+.stories__preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+.stories__title {
+  font-size: 1.2 rem;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
